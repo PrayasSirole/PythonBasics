@@ -1,0 +1,127 @@
+// program to Check if a number is odd or even.--->
+x=int(input("Enter a number : "))
+if x%2==0: print("Number is Even")
+else: print("Number is Odd")
+
+
+//program to Check Leap Year.--->
+year=int(input("Enter a year : "))
+if year%4==0: print(f"{year} year is a leap year.")
+else: print(f"{year} is not a leap year.")
+
+
+//program to find the largest among three numbers.--->
+x=int(input("Enter First Number : "))
+y=int(input("Enter Second Number : "))
+z=int(input("Enter Third Number : "))
+if x>y and x>z: print(f"{x} is larger among all")
+elif y>x and y>z: print(f"{y} is larger among all")
+elif z>x and z>y: print(f"{z} is larger among all")
+else: print("All are same.")
+
+
+//program to Check Prime Number.--->
+num=int(input("Enter a number : "))
+notPrime=False
+ifnum> 1:
+for i in range(2, num):
+if (num % i) == 0:
+print(f"{num} is not a prime number.")
+notPrime=True
+break
+ifnotPrime==False : print(f"{num} is a prime number.")
+
+
+//program to Print All Prime Numbers in an Interval.--->
+start=int(input("Enter start point : "))
+end=int(input("Enter end point : "))
+for i in range(start,end):
+for j in range(2,i):
+if i % j==0:break
+else: print(i)
+
+
+//program to find the Factorial of a number.--->
+x=int(input("Enter a number : "))
+factorial=1
+if x<0: print(f"Sorry, factorial does not exist for {x}")
+elif x==0:print("The factorial of 0 is 1")
+else:
+for i in range(1,x+1):
+factorial = factorial*i
+print(f"Factorial of {x} is {factorial}")
+
+
+//program to Display the Multiplication Table.--->
+x=int(input("Enter a number : "))
+print(f"Multiplication Table of {x} is : ")
+for i in range(1,11): print(f"{x} x {i} = {x*i}")
+
+
+//program to Print The Fibonacci Sequence.
+upto=int(input("Enter end point : "))
+x=0
+y=1
+while x<=upto:
+print(f"{x}") 
+ z=x+y
+ x=y
+ y=z
+
+
+//Reprint that value along with its conversion equivalent number of liters.
+gallons=float(input("Enter gallons: "))
+liters=0
+liters=3.7854*gallons;
+print(f"Liters : {liters}")
+
+
+//program that allows a user to enter his or her two favorite foods. The program should then print out the name of a new food by joining the original food names together.
+food1=input("Enter Food Name : ")
+food2=input("Enter another Food Name : ")
+favouriteFood=f"{food1}{food2}"
+print(f"Favourite Food is : {favouriteFood}")
+
+
+//a tipper program where the user enters a restaurant bill total. The program should then display two amounts: a 15 percent tip and a 20 percent tip.
+def tip(billAmount,percentage):
+tipAmount=(billAmount*percentage)/100
+print(f"Bill Amount for {percentage}% tip is : {tipAmount}")
+billAmount=int(input("Enter Bill Amount : "))
+tip(billAmount,15)
+tip(billAmount,20)
+
+
+//a car salesman program where the user enters the base price of a car. The program should add on a bunch of extra fees such as tax, license, dealer prep, and destination charge. Make tax and license a percent of the base price. The other fees should be set values. Display the actual price of the car once all the extras are applied.
+carPrice=float(input("Enter base price of Car : "))
+tax=8/100
+licenseFee=7/100
+dealerFee=80
+destinationFee=150
+tax *=carPrice
+licenseFee*= carPrice
+total=carPrice+tax+licenseFee+dealerFee+destinationFee
+print("%-20s : %12f" %('Base price of Car ',carPrice))
+print("%-20s : %12f" %('All Taxes (8%) ',round(tax,2)))
+print("%-20s : %12f" %('Licensing Fee (7%) ',round(licenseFee,2)))
+print("%-20s : %12f" %('Dealership Fee ',dealerFee))
+print("%-20s : %12f" %('Destination Fee ',destinationFee))
+print("%-20s : %12f" %('Total Price of Car ',round(total,2)))
+
+
+//program with a function that calculates the area of a circle by taking a radius from the user.
+import math
+defareaOfCircle(radius):
+area=3.14*(math.pow(radius,2))
+print(f"Area of Circle is : {area}")
+radius=int(input("Enter Circle's Radius : "))
+areaOfCircle(radius)
+
+
+//sum function calledmysumthat takes a list as a parameter and returns the accumulated sum.
+defmySum(listOfNumbers):
+total=0
+for number in listOfNumbers: total=total+number
+print(total)
+total=mySum([1,2,3,4,5,6,7,8,9,10])
+
